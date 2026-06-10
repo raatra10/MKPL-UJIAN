@@ -41,7 +41,6 @@ jobs:
     # --- TAHAP 3: CI/CD DEPLOYMENT (GITHUB PACKAGES) ---
     # Langkah di bawah ini HANYA akan dieksekusi jika trigger-nya adalah pembuatan RELEASE baru
     - name: Verify settings.xml exists in .m2 directory
-      if: github.event_name == 'release'
       run: ls -al ~/.m2
 
     - name: Publish to GitHub Packages Apache Maven
